@@ -16,7 +16,7 @@
   "scripts": {
     "build": "tsc",
     "release": "standard-version",
-    "preinstall": "npx simple-git-hooks",
+    "prepare": "npx simple-git-hooks",
     "lint": "eslint . --fix"
   },
   "devDependencies": {
