@@ -1,0 +1,40 @@
+{
+  "name": "@ckpack/midway-plugin-sequelize",
+  "version": "0.0.1",
+  "description": "",
+  "author": "ckvv",
+  "license": "ISC",
+  "keywords": [
+    "midway",
+    "sequelize"
+  ],
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "release": "standard-version",
+    "preinstall": "npx simple-git-hooks",
+    "lint": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.8.1",
+    "@midwayjs/core": "^3.15.0",
+    "@sequelize/core": "^7.0.0-alpha.37",
+    "eslint": "^8.57.0",
+    "simple-git-hooks": "^2.10.0",
+    "standard-version": "^9.5.0",
+    "typescript": "^5.4.2"
+  },
+  "simple-git-hooks": {
+    "commit-msg": "node scripts/verify-commit.mjs",
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,mjs,cjs,tsx,jsx,vue,json}": [
+      "eslint --fix"
+    ]
+  }
+}
