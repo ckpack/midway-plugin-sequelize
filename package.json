@@ -21,15 +21,17 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.8.1",
+    "@ckpack/base": "^1.0.3",
     "@midwayjs/core": "^3.15.0",
     "@sequelize/core": "^7.0.0-alpha.37",
     "eslint": "^8.57.0",
-    "simple-git-hooks": "^2.10.0",
+    "lint-staged": "^15.2.2",
+    "simple-git-hooks": "^2.11.0",
     "standard-version": "^9.5.0",
     "typescript": "^5.4.2"
   },
   "simple-git-hooks": {
-    "commit-msg": "node scripts/verify-commit.mjs",
+    "commit-msg": "npx -p @ckpack/base verify-commit",
     "pre-commit": "npx lint-staged"
   },
   "lint-staged": {

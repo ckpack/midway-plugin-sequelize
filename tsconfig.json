@@ -1,21 +1,8 @@
 {
-  "compileOnSave": true,
+  "extends": "@ckpack/base/tsconfig",
   "compilerOptions": {
-    "target": "ESNext",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
     "rootDir": "src",
-    "module": "NodeNext",
-    "moduleResolution": "nodenext",
-    "strict": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-    "noUnusedLocals": true,
-    "declaration": true,
-    "noEmitOnError": false,
-    "outDir": "dist",
-    "stripInternal": true,
-    "skipLibCheck": true
+    "outDir": "dist"
   },
   "include": [
     "./src/**/*.ts"
